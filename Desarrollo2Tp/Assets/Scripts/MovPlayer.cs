@@ -8,81 +8,111 @@ public class MovPlayer : MonoBehaviour {
     private bool back;
     private bool right;
     private bool left;
-    private bool run;
+    private bool push;
     private float vel;
+    private float pushVel;
+    private string forwadButton;
+    private string backButton;
+    private string rightButton;
+    private string leftButton;
+    private string pushButton;
+
 
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
-        vel = 100;
-    }
-    void Start ()
-    {
+        vel = 5;
+        pushVel = 0;
         forwad = false;
         back = false;
         right = false;
         left = false;
-        run = false;
-	}
+        push = false;
+    }
+    void Start ()
+    {
+        if(tag == "Player1")
+        {
+            forwadButton = "ForwadP1";
+            backButton = "BackP1";
+            rightButton = "RightP1";
+            leftButton = "LeftP1";
+            pushButton = "PushP1";
+        }
+        else if (tag == "Player2")
+        {
+            forwadButton = "ForwadP2";
+            backButton = "BackP2";
+            rightButton = "RightP2";
+            leftButton = "LeftP2";
+            pushButton = "PushP2";
+        }
+    }
     void FixedUpdate()
     {
         if (forwad)
         {
-            rgb.AddRelativeForce(Vector3.forward * Time.deltaTime * vel, ForceMode.Impulse);
+            rgb.AddRelativeForce(Vector3.forward * vel, ForceMode.VelocityChange);
         }
 
         if (back)
         {
-            rgb.AddRelativeForce(Vector3.back * Time.deltaTime * vel, ForceMode.Impulse);
+            rgb.AddRelativeForce(Vector3.back * vel, ForceMode.VelocityChange);
         }
 
         if (right)
         {
-            rgb.AddRelativeForce(Vector3.right * Time.deltaTime * vel, ForceMode.Impulse);
+            rgb.AddRelativeForce(Vector3.right * vel, ForceMode.VelocityChange);
         }
 
         if (left)
         {
-            rgb.AddRelativeForce(Vector3.left * Time.deltaTime * vel, ForceMode.Impulse);
+            rgb.AddRelativeForce(Vector3.left * vel, ForceMode.VelocityChange);
         }
 
-        if (run)
+        if (push)
         {
-            rgb.AddRelativeForce(Vector3.forward * Time.deltaTime * (vel*2) , ForceMode.Impulse);
+            print("asd");
+            rgb.AddRelativeForce(Vector3.forward * pushVel , ForceMode.VelocityChange);
+            pushVel = 0;
+            push = false;
         }
 
     }
     void Update ()
     {
-        if (Input.GetButton("ForwadP1"))
+        //print(pushVel);
+        if (Input.GetButton(forwadButton))
         {
             forwad = true;
         }
         else
             forwad = false;
-        if (Input.GetButton("BackP1"))
+        if (Input.GetButton(backButton))
         {
             back = true;
         }
         else
             back = false;
-        if (Input.GetButton("RightP1"))
+        if (Input.GetButton(rightButton))
         {
             right = true;
         }
         else
             right = false;
-        if (Input.GetButton("LeftP1"))
+        if (Input.GetButton(leftButton))
         {
             left = true;
         }
         else
             left = false;
-        /*if (Input.GetButton("Run"))
+        if (Input.GetButton(pushButton))
         {
-            run = true;
+            pushVel++;
         }
-        else
-            run = false;*/
+        if (Input.GetButtonDown(pushButton))
+        {
+            push = true;
+        }
     }
 }
