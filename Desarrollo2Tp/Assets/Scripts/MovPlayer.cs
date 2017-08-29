@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovPlayer : MonoBehaviour {
     private Rigidbody rgb;
+    private bool coliPiso;
     private bool forwad;
     private bool back;
     private bool right;
@@ -21,7 +22,7 @@ public class MovPlayer : MonoBehaviour {
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
-        vel = 5;
+        vel = 3;
         pushVel = 0;
         forwad = false;
         back = false;
@@ -77,42 +78,56 @@ public class MovPlayer : MonoBehaviour {
             pushVel = 0;
             push = false;
         }
+        rgb.AddForce(Vector3.down * 50);
 
     }
     void Update ()
     {
-        //print(pushVel);
-        if (Input.GetButton(forwadButton))
+        if (coliPiso)
         {
-            forwad = true;
+            if (Input.GetButton(forwadButton))
+            {
+                forwad = true;
+            }
+            else
+                forwad = false;
+            if (Input.GetButton(backButton))
+            {
+                back = true;
+            }
+            else
+                back = false;
+            if (Input.GetButton(rightButton))
+            {
+                right = true;
+            }
+            else
+                right = false;
+            if (Input.GetButton(leftButton))
+            {
+                left = true;
+            }
+            else
+                left = false;
+            if (Input.GetButton(pushButton))
+            {
+                pushVel += 2;
+                //print(pushVel);
+
+            }
+            if (Input.GetButtonUp(pushButton))
+            {
+                push = true;
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Piso")
+        {
+            coliPiso = true;
         }
         else
-            forwad = false;
-        if (Input.GetButton(backButton))
-        {
-            back = true;
-        }
-        else
-            back = false;
-        if (Input.GetButton(rightButton))
-        {
-            right = true;
-        }
-        else
-            right = false;
-        if (Input.GetButton(leftButton))
-        {
-            left = true;
-        }
-        else
-            left = false;
-        if (Input.GetButton(pushButton))
-        {
-            pushVel++;
-        }
-        if (Input.GetButtonDown(pushButton))
-        {
-            push = true;
-        }
+            coliPiso = false;
     }
 }
