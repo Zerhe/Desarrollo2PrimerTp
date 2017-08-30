@@ -20,5 +20,7 @@ public class Respawn : MonoBehaviour {
             //rgb.velocity = Vector3.zero;
             rgb.angularVelocity = Vector3.zero;
         }
+        /*if (Input.GetButton)
+            transform.rotation.x*/
 	}
 }
