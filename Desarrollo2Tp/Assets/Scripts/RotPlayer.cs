@@ -13,12 +13,12 @@ public class RotPlayer : MonoBehaviour {
 	void Awake () {
         rgb = GetComponent<Rigidbody>();
         velRot = 0.5f;
-        if (tag == "Player1")
+        if (name == "Player1")
         {
             rotRightButton = "RotRP1";
             rotLeftButton = "RotLP1";
         }
-        else if (tag == "Player2")
+        else if (name == "Player2")
         {
             rotRightButton = "RotRP2";
             rotLeftButton = "RotLP2";

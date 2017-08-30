@@ -12,6 +12,7 @@ public class MovPlayer : MonoBehaviour {
     private bool push;
     private float vel;
     private float pushVel;
+    private float impulsoVel;
     private string forwadButton;
     private string backButton;
     private string rightButton;
@@ -24,6 +25,7 @@ public class MovPlayer : MonoBehaviour {
         rgb = GetComponent<Rigidbody>();
         vel = 3;
         pushVel = 0;
+        impulsoVel = 2;
         forwad = false;
         back = false;
         right = false;
@@ -32,7 +34,7 @@ public class MovPlayer : MonoBehaviour {
     }
     void Start ()
     {
-        if(tag == "Player1")
+        if(name == "Player1")
         {
             forwadButton = "ForwadP1";
             backButton = "BackP1";
@@ -40,7 +42,7 @@ public class MovPlayer : MonoBehaviour {
             leftButton = "LeftP1";
             pushButton = "PushP1";
         }
-        else if (tag == "Player2")
+        else if (name == "Player2")
         {
             forwadButton = "ForwadP2";
             backButton = "BackP2";
@@ -73,7 +75,7 @@ public class MovPlayer : MonoBehaviour {
 
         if (push)
         {
-            print("asd");
+            //print("asd");
             rgb.AddRelativeForce(Vector3.forward * pushVel , ForceMode.VelocityChange);
             pushVel = 0;
             push = false;
@@ -111,8 +113,11 @@ public class MovPlayer : MonoBehaviour {
                 left = false;
             if (Input.GetButton(pushButton))
             {
-                pushVel += 2;
-                //print(pushVel);
+                if (pushVel < 350)
+                {
+                    pushVel += 2;
+                }
+                print(pushVel);
 
             }
             if (Input.GetButtonUp(pushButton))
@@ -127,7 +132,16 @@ public class MovPlayer : MonoBehaviour {
         {
             coliPiso = true;
         }
-        else
+        if (collision.gameObject.tag == "Player")
+        {
+            rgb.AddForce(collision.relativeVelocity * impulsoVel, ForceMode.VelocityChange);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Piso")
+        {
             coliPiso = false;
+        }
     }
 }
