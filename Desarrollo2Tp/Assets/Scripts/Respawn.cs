@@ -12,15 +12,18 @@ public class Respawn : MonoBehaviour {
 	
 	void Update () {
 		if (transform.position.y < -15)
-        {
-            positionToRespawn.x = Random.Range(-40, 40);
-            positionToRespawn.y = 25;
-            positionToRespawn.z = Random.Range(-40, 40);
-            transform.position = positionToRespawn;
-            //rgb.velocity = Vector3.zero;
-            rgb.angularVelocity = Vector3.zero;
-        }
-        /*if (Input.GetButton)
-            transform.rotation.x*/
-	}
+            RespanwnRandom();
+
+        if (Input.GetButton("Reset"))
+            transform.rotation = Quaternion.identity;
+    }
+    void RespanwnRandom()
+    {
+        positionToRespawn.x = Random.Range(-40, 40);
+        positionToRespawn.y = 25;
+        positionToRespawn.z = Random.Range(-40, 40);
+        transform.position = positionToRespawn;
+        //rgb.velocity = Vector3.zero;
+        rgb.angularVelocity = Vector3.zero;
+    }
 }

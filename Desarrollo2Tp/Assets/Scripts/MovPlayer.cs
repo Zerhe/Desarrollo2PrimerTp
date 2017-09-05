@@ -128,18 +128,21 @@ public class MovPlayer : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Piso")
-        {
-            coliPiso = true;
-        }
         if (collision.gameObject.tag == "Player")
         {
             rgb.AddForce(collision.relativeVelocity * impulsoVel, ForceMode.VelocityChange);
         }
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Plataforma")
+        {
+            coliPiso = true;
+        }
+    }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "Piso")
+        if (collision.gameObject.tag == "Plataforma")
         {
             coliPiso = false;
         }
