@@ -23,7 +23,7 @@ public class MovPlayer : MonoBehaviour {
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
-        vel = 3;
+        vel = 1.5f;
         pushVel = 0;
         impulsoVel = 2;
         forwad = false;
@@ -113,7 +113,7 @@ public class MovPlayer : MonoBehaviour {
                 left = false;
             if (Input.GetButton(pushButton))
             {
-                if (pushVel < 350)
+                if (pushVel < 150)
                 {
                     pushVel += 2;
                 }
@@ -146,5 +146,9 @@ public class MovPlayer : MonoBehaviour {
         {
             coliPiso = false;
         }
+    }
+    public float getPushVel()
+    {
+        return pushVel;
     }
 }

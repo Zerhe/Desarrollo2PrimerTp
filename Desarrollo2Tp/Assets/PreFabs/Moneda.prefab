@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54963585234325116}
   m_Layer: 0
   m_Name: Moneda
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33181659419542374
 MeshFilter:

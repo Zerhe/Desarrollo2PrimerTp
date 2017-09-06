@@ -16,7 +16,6 @@ public class RotPared : MonoBehaviour {
 	}
 	
 	void Update () {
-        print(timerRot);
 		if(rotLeft)
         {
             transform.Rotate(Vector3.down * Time.deltaTime * velRot);

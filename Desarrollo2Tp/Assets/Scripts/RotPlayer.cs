@@ -12,7 +12,7 @@ public class RotPlayer : MonoBehaviour {
 
 	void Awake () {
         rgb = GetComponent<Rigidbody>();
-        velRot = 0.5f;
+        velRot = 0.25f;
         if (name == "Player1")
         {
             rotRightButton = "RotRP1";

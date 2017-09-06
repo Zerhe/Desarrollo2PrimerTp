@@ -6,15 +6,15 @@ public class SpawnMonedas : MonoBehaviour {
     [SerializeField]
     private GameObject moneda;
     private GameObject[] monedas = new GameObject[100];
-    int timerSpawn;
-    int n;
+    private int timerSpawn;
+    private int n;
 
 	void Start () {
         timerSpawn = 0;
         n = 0;
         for (int i = 0; i < monedas.Length; i++)
         {
-            monedas[i] = Instantiate(moneda, RandomPosition(), transform.rotation);
+            monedas[i] = Instantiate(moneda, RandomPosition(), Quaternion.Euler(0,0,90));
             monedas[i].SetActive(false);
         }
     }
