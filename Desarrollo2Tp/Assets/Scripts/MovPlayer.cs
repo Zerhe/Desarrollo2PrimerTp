@@ -117,7 +117,6 @@ public class MovPlayer : MonoBehaviour {
                 {
                     pushVel += 2;
                 }
-                print(pushVel);
 
             }
             if (Input.GetButtonUp(pushButton))

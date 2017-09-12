@@ -19,19 +19,19 @@ public class RotPared : MonoBehaviour {
 		if(rotLeft)
         {
             transform.Rotate(Vector3.down * Time.deltaTime * velRot);
-            timerRot++;
+            timerRot += Time.deltaTime;
         }
         else if (rotRight)
         {
             transform.Rotate(Vector3.up * Time.deltaTime * velRot);
-            timerRot--;
+            timerRot -= Time.deltaTime;
         }
-        if (timerRot == 40)
+        if (timerRot > 1)
         {
             rotLeft = false;
             rotRight = true;
         }
-        else if (timerRot == -10)
+        else if (timerRot < 0)
         {
             rotRight = false; ;
             rotLeft = true; ;

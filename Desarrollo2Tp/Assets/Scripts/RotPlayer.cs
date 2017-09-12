@@ -38,13 +38,20 @@ public class RotPlayer : MonoBehaviour {
         }
     }
     void Update() {
+        print(transform.rotation);
 
-        if (Input.GetButton(rotRightButton))
-        {
-            print("asdad");
-            rotRight = true;
-        }
+        rotRight = Input.GetButton(rotRightButton);
         rotLeft = Input.GetButton(rotLeftButton);
+
+        if(transform.rotation.x > 0.3)
+            transform.rotation = Quaternion.Euler(0.3f, transform.rotation.y, transform.rotation.z);
+        else if (transform.rotation.x < -0.3)
+            transform.rotation = Quaternion.Euler(-0.3f, transform.rotation.y, transform.rotation.z);
+        if (transform.rotation.z > 0.3)
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0.3f);
+        else if (transform.rotation.z < -0.3)
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -0.3f);
+
 
     }
 }
