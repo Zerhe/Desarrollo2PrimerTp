@@ -32,17 +32,19 @@ public class Timer : MonoBehaviour {
         }
         timerText.text = "" + timerGame;
 
-        if (timerGame == 4)
+        if (timerGame == 200)
         {
             panelWin.SetActive(true);
             if (scorePlayer01.getScore() > scorePlayer02.getScore() )
             {
                 playerWinText.text = "Player01 Win Congratulñaiotionsada < 3";
             }
-            else
+            else if (scorePlayer02.getScore() > scorePlayer01.getScore())
             {
                 playerWinText.text = "Player02 Win Congratulñaiotionsada < 3";
             }
+            else
+                playerWinText.text = "Empate";
         }
-	}
+    }
 }

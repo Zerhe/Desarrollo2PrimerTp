@@ -21,7 +21,7 @@ public class SpawnMonedas : MonoBehaviour {
 	
 	void Update () {
         timerSpawn++;
-        if(timerSpawn == 200)
+        if(timerSpawn == 200 && n < monedas.Length)
         {
             monedas[n].SetActive(true);
             timerSpawn = 0;

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,19 +38,20 @@ public class RotPlayer : MonoBehaviour {
         }
     }
     void Update() {
-        print(transform.rotation);
+        print(rgb.rotation.eulerAngles);
 
         rotRight = Input.GetButton(rotRightButton);
         rotLeft = Input.GetButton(rotLeftButton);
 
-        if(transform.rotation.x > 0.3)
-            transform.rotation = Quaternion.Euler(0.3f, transform.rotation.y, transform.rotation.z);
-        else if (transform.rotation.x < -0.3)
-            transform.rotation = Quaternion.Euler(-0.3f, transform.rotation.y, transform.rotation.z);
-        if (transform.rotation.z > 0.3)
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0.3f);
-        else if (transform.rotation.z < -0.3)
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -0.3f);
+
+        /*if(rgb.rotation.x > 0.3)
+            rgb.rotation = Quaternion.Euler(0.3f, rgb.rotation.y, rgb.rotation.z);
+        else if (rgb.rotation.x < -0.3)
+            rgb.rotation = Quaternion.Euler(-0.3f, rgb.rotation.y, rgb.rotation.z);*/
+        if (rgb.rotation.eulerAngles.z > 15 && rgb.rotation.eulerAngles.z < 300)
+            rgb.rotation = Quaternion.Euler(rgb.rotation.eulerAngles.x, rgb.rotation.eulerAngles.y, 15f);
+        else if (rgb.rotation.eulerAngles.z < 345 && rgb.rotation.eulerAngles.z > 300)
+            rgb.rotation = Quaternion.Euler(rgb.rotation.eulerAngles.x, rgb.rotation.eulerAngles.y, 345f);
 
 
     }
