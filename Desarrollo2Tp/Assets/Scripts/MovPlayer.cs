@@ -131,6 +131,10 @@ public class MovPlayer : MonoBehaviour {
         {
             rgb.AddForce(collision.relativeVelocity * impulsoVel, ForceMode.VelocityChange);
         }
+        /*if (collision.gameObject.layer == 8)
+        {
+            transform.SetParent(collision.gameObject.transform, true);
+        }*/
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -145,6 +149,10 @@ public class MovPlayer : MonoBehaviour {
         {
             coliPiso = false;
         }
+        /*if (collision.gameObject.layer == 8)
+        {
+            transform.SetParent(null);
+        }*/
     }
     public float getPushVel()
     {
