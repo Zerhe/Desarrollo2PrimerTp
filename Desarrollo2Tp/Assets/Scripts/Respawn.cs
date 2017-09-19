@@ -1,21 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour {
     private Vector3 positionToRespawn;
     private Rigidbody rgb;
+    [SerializeField]
+    private ScorePlayer scoreOtherPlayer;
+    private ScorePlayer scorePlayer;
 
 	void Start () {
         rgb = GetComponent<Rigidbody>();
+        scorePlayer = GetComponent<ScorePlayer>();
 	}
 	
 	void Update () {
-		if (transform.position.y < -15)
+        if (transform.position.y < -15)
+        {
+            scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
+            scorePlayer.SetScore(0);
             RespanwnRandom();
-
+        }
         if (Input.GetButton("Reset"))
-            transform.rotation = Quaternion.identity;
+            SceneManager.LoadScene("Game");
     }
     void RespanwnRandom()
     {

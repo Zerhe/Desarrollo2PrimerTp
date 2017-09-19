@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnMonedas : MonoBehaviour {
     [SerializeField]
     private GameObject moneda;
-    private GameObject[] monedas = new GameObject[100];
+    private GameObject[] monedas = new GameObject[400];
     private int timerSpawn;
     private int n;
 
@@ -21,7 +21,7 @@ public class SpawnMonedas : MonoBehaviour {
 	
 	void Update () {
         timerSpawn++;
-        if(timerSpawn == 200 && n < monedas.Length)
+        if(timerSpawn == 50 && n < monedas.Length)
         {
             monedas[n].SetActive(true);
             timerSpawn = 0;

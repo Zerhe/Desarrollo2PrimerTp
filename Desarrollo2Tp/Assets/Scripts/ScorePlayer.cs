@@ -18,8 +18,12 @@ public class ScorePlayer : MonoBehaviour {
             score++;
         }
     }
-    public int getScore()
+    public int GetScore()
     {
         return score;
+    }
+    public void SetScore(int valor)
+    {
+        score = valor;
     }
 }
