@@ -13,11 +13,11 @@ public class Moneda : MonoBehaviour {
         coll = GetComponent<CapsuleCollider>();
     }
     void Start () {
-        velRot = 10;
+        velRot = 500;
 	}
 	
 	void Update () {
-        transform.Rotate(Vector3.right * velRot);
+        transform.Rotate(Vector3.right * Time.deltaTime * velRot);
 	}
     private void OnCollisionEnter(Collision collision)
     {

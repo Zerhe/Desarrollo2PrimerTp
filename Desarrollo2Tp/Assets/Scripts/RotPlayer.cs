@@ -38,7 +38,6 @@ public class RotPlayer : MonoBehaviour {
         }
     }
     void Update() {
-        print(rgb.rotation.eulerAngles);
 
         rotRight = Input.GetButton(rotRightButton);
         rotLeft = Input.GetButton(rotLeftButton);

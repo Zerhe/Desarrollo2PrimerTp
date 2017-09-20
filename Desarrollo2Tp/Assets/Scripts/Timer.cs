@@ -23,20 +23,20 @@ public class Timer : MonoBehaviour {
     private void Start()
     {
         timer = 0;
-        timerGame = 0;
+        timerGame = 100;
         sumTimer = true;
     }
     void Update () {
         if (sumTimer)
-            timer++;
-        if(timer == 50)
+            timer += Time.deltaTime;
+        if (timer >= 1)
         {
-            timerGame++;
+            timerGame--;
             timer = 0;
         }
         timerText.text = "" + timerGame;
 
-        if (timerGame == 200 && sumTimer)
+        if (timerGame == 0 && sumTimer)
         {
             sumTimer = false;
             panelWin.SetActive(true);

@@ -6,7 +6,7 @@ public class SpawnMonedas : MonoBehaviour {
     [SerializeField]
     private GameObject moneda;
     private GameObject[] monedas = new GameObject[400];
-    private int timerSpawn;
+    private float timerSpawn;
     private int n;
 
 	void Start () {
@@ -20,8 +20,8 @@ public class SpawnMonedas : MonoBehaviour {
     }
 	
 	void Update () {
-        timerSpawn++;
-        if(timerSpawn == 50 && n < monedas.Length)
+        timerSpawn += Time.deltaTime;
+        if(timerSpawn >= 1 && n < monedas.Length)
         {
             monedas[n].SetActive(true);
             timerSpawn = 0;

@@ -85,6 +85,7 @@ public class MovPlayer : MonoBehaviour {
     }
     void Update ()
     {
+        print(pushVel);
         if (coliPiso)
         {
             if (Input.GetButton(forwadButton))
@@ -115,7 +116,7 @@ public class MovPlayer : MonoBehaviour {
             {
                 if (pushVel < 150)
                 {
-                    pushVel += 2;
+                    pushVel += Time.deltaTime*150;
                 }
 
             }
@@ -133,7 +134,8 @@ public class MovPlayer : MonoBehaviour {
         }
         /*if (collision.gameObject.layer == 8)
         {
-            transform.SetParent(collision.gameObject.transform, true);
+            transform.SetParent(collision.gameObject.transform.GetChild(0), false);
+            print(collision.gameObject.name);
         }*/
     }
     private void OnCollisionStay(Collision collision)
