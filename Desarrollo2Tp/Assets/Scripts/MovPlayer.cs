@@ -85,7 +85,6 @@ public class MovPlayer : MonoBehaviour {
     }
     void Update ()
     {
-        print(pushVel);
         if (coliPiso)
         {
             if (Input.GetButton(forwadButton))
@@ -132,11 +131,11 @@ public class MovPlayer : MonoBehaviour {
         {
             rgb.AddForce(collision.relativeVelocity * impulsoVel, ForceMode.VelocityChange);
         }
-        /*if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8)
         {
-            transform.SetParent(collision.gameObject.transform.GetChild(0), false);
+            transform.SetParent(collision.gameObject.transform.GetChild(0), true);
             print(collision.gameObject.name);
-        }*/
+        }
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -151,10 +150,10 @@ public class MovPlayer : MonoBehaviour {
         {
             coliPiso = false;
         }
-        /*if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8)
         {
             transform.SetParent(null);
-        }*/
+        }
     }
     public float getPushVel()
     {

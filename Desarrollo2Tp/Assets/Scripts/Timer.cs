@@ -42,11 +42,11 @@ public class Timer : MonoBehaviour {
             panelWin.SetActive(true);
             if (scorePlayer01.GetScore() > scorePlayer02.GetScore() )
             {
-                playerWinText.text = "Player01 Win Congratulñaiotionsada < 3";
+                playerWinText.text = "Player01 Win <3";
             }
             else if (scorePlayer02.GetScore() > scorePlayer01.GetScore())
             {
-                playerWinText.text = "Player02 Win Congratulñaiotionsada < 3";
+                playerWinText.text = "Player02 Win <3";
             }
             else
                 playerWinText.text = "Empate";
