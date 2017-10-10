@@ -9,6 +9,7 @@ public class Respawn : MonoBehaviour {
     [SerializeField]
     private ScorePlayer scoreOtherPlayer;
     private ScorePlayer scorePlayer;
+    private int deathsPlayer;
 
 	void Start () {
         rgb = GetComponent<Rigidbody>();
@@ -21,6 +22,7 @@ public class Respawn : MonoBehaviour {
             scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
             scorePlayer.SetScore(0);
             RespanwnRandom();
+            deathsPlayer++;
         }
         if (Input.GetButton("Reset"))
             SceneManager.LoadScene("Game");
@@ -33,5 +35,9 @@ public class Respawn : MonoBehaviour {
         transform.position = positionToRespawn;
         //rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
+    }
+    public int GetDeaths()
+    {
+        return deathsPlayer;
     }
 }
