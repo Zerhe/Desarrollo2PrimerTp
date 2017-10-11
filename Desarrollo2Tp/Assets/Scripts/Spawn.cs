@@ -6,9 +6,9 @@ public class Spawn : MonoBehaviour {
     [SerializeField]
     private GameObject moneda;
     [SerializeField]
-    private GameObject bala;
+    private GameObject municion;
     private GameObject[] monedas = new GameObject[400];
-    private GameObject[] balas = new GameObject[20];
+    private GameObject[] municiones = new GameObject[20];
     private float timerSpawn01;
     private float timerSpawn02;
     private int n;
@@ -24,10 +24,10 @@ public class Spawn : MonoBehaviour {
             monedas[i] = Instantiate(moneda, RandomPosition(), Quaternion.Euler(0,0,90));
             monedas[i].SetActive(false);
         }
-        for (int i = 0; i < balas.Length; i++)
+        for (int i = 0; i < municiones.Length; i++)
         {
-            balas[i] = Instantiate(bala, RandomPosition(), Quaternion.Euler(0, 0, 90));
-            balas[i].SetActive(false);
+            municiones[i] = Instantiate(municion, RandomPosition(), Quaternion.Euler(0, 0, 90));
+            municiones[i].SetActive(false);
         }
     }
 	
@@ -41,9 +41,9 @@ public class Spawn : MonoBehaviour {
             timerSpawn01 = 0;
             n++;
         }
-        if (timerSpawn02 >= 5 && m < balas.Length)
+        if (timerSpawn02 >= 5 && m < municiones.Length)
         {
-            balas[m].SetActive(true);
+            municiones[m].SetActive(true);
             timerSpawn02 = 0;
             m++;
         }

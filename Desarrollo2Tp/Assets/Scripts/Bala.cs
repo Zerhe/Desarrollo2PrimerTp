@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bala : MonoBehaviour {
-    private Rigidbody rgb;
-    private SphereCollider coll;
+    [SerializeField]
+    private float velMov;
+    [SerializeField]
+    private float velImpulso;
 
-    private void Awake()
-    {
-        rgb = GetComponent<Rigidbody>();
-        coll = GetComponent<SphereCollider>();
-    }
+	void Start () {
+		
+	}
+	
+	void Update () {
+        transform.Translate(Vector3.forward * velMov * Time.deltaTime);
+	}
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Plataforma")
+        if(collision.gameObject.tag == "Player")
         {
-            rgb.useGravity = false;
-            coll.isTrigger = true;
-
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.relativeVelocity * velImpulso, ForceMode.VelocityChange);
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(this.gameObject);
-        }
+        gameObject.SetActive(false);
     }
 }

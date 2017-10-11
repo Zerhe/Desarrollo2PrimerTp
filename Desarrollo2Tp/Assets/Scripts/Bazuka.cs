@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bazuka : MonoBehaviour {
-    [SerializeField]
-    private GameObject bazukaPlayer01;
-    [SerializeField]
-    private GameObject bazukaPlayer02;
+public class Bazuka : MonoBehaviour
+{
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player01")
+        if (other.gameObject.tag == "Player")
         {
-            //if (bazukaPlayer01.enable
+            if (other.gameObject.transform.GetChild(0).gameObject.activeInHierarchy == false)
+            {
+                other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
     }
-
-}
 }
