@@ -10,8 +10,12 @@ public class Respawn : MonoBehaviour {
     private ScorePlayer scoreOtherPlayer;
     private ScorePlayer scorePlayer;
     private int deathsPlayer;
+    [SerializeField]
+    private float minRespawn;
+    [SerializeField]
+    private float maxRespawn;
 
-	void Start () {
+    void Start () {
         rgb = GetComponent<Rigidbody>();
         scorePlayer = GetComponent<ScorePlayer>();
 	}
@@ -29,9 +33,9 @@ public class Respawn : MonoBehaviour {
     }
     void RespanwnRandom()
     {
-        positionToRespawn.x = Random.Range(-40, 40);
+        positionToRespawn.x = Random.Range(-minRespawn, maxRespawn);
         positionToRespawn.y = 25;
-        positionToRespawn.z = Random.Range(-40, 40);
+        positionToRespawn.z = Random.Range(-minRespawn, maxRespawn);
         transform.position = positionToRespawn;
         //rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
