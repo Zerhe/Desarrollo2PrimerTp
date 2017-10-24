@@ -1,4 +1,4 @@
-# Desarrollo2PrimerTp
+# Push is Fun
 
 Descripcion:
 Juego realizado para la amteria de Desarrollo de Videojuegos II, 
@@ -13,6 +13,6 @@ Trello:
 https://trello.com/b/qODlaD9P/primer-tp-desarrolo-2
 
 ScreenShots:
-![alt text] (imagen01.png)
-![alt text] (imagen02.png)
+[alt text] (imagen01.png)
+[alt text] (imagen02.png)
 
