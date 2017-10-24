@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour {
     private Vector3 positionToRespawn;
+    [SerializeField]
+    private Transform transformPoint;
     private Rigidbody rgb;
     [SerializeField]
     private ScorePlayer scoreOtherPlayer;
@@ -36,6 +38,7 @@ public class Respawn : MonoBehaviour {
         positionToRespawn.x = Random.Range(-minRespawn, maxRespawn);
         positionToRespawn.y = 25;
         positionToRespawn.z = Random.Range(-minRespawn, maxRespawn);
+        positionToRespawn += transformPoint.position;
         transform.position = positionToRespawn;
         //rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
@@ -43,5 +46,9 @@ public class Respawn : MonoBehaviour {
     public int GetDeaths()
     {
         return deathsPlayer;
+    }
+    public void SetTransformPoint(Transform valor)
+    {
+        transformPoint = valor;
     }
 }

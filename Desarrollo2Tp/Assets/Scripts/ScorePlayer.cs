@@ -15,7 +15,7 @@ public class ScorePlayer : MonoBehaviour {
     {
         if (other.gameObject.tag == "Moneda")
         {
-            score++;
+            score += other.gameObject.GetComponent<Moneda>().GetValor();
         }
     }
     public int GetScore()

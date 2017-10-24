@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Moneda : MonoBehaviour {
+    [SerializeField]
+    private int valor;
     private float velRot;
     private Rigidbody rgb;
     private CapsuleCollider coll;
+    public int tutu;
 
     private void Awake()
     {
@@ -34,5 +37,9 @@ public class Moneda : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+    }
+    public int GetValor()
+    {
+        return valor;
     }
 }
