@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private ScorePlayer scorePlayer02;
     private float timer;
+    [SerializeField]
     private float timerGame;
     private bool sumTimer;
 
@@ -23,7 +24,6 @@ public class Timer : MonoBehaviour {
     private void Start()
     {
         timer = 0;
-        timerGame = 100;
         sumTimer = true;
     }
     void Update () {

@@ -3189,6 +3189,7 @@ MonoBehaviour:
   playerWinText: {fileID: 352514481}
   scorePlayer01: {fileID: 1952708643}
   scorePlayer02: {fileID: 1857133232}
+  timerGame: 100
 --- !u!114 &1269875389
 MonoBehaviour:
   m_ObjectHideFlags: 0

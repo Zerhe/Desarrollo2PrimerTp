@@ -25,8 +25,8 @@ public class Respawn : MonoBehaviour {
 	void Update () {
         if (transform.position.y < -15)
         {
-            scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
-            scorePlayer.SetScore(0);
+            //scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
+            //scorePlayer.SetScore(0);
             RespanwnRandom();
             deathsPlayer++;
         }
