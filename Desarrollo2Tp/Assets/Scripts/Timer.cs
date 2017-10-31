@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour {
     private float timerGame;
     private bool sumTimer;
 
-	void Awake () {
+    void Awake () {
         timerText = GetComponent<Text>();
 	}
     private void Start()
@@ -40,16 +40,35 @@ public class Timer : MonoBehaviour {
         {
             sumTimer = false;
             panelWin.SetActive(true);
-            if (scorePlayer01.GetScore() > scorePlayer02.GetScore() )
-            {
-                playerWinText.text = "Player01 Win <3";
-            }
+            if (scorePlayer01.GetScore() > scorePlayer02.GetScore())
+                scorePlayer01.SumScoreFinal();
             else if (scorePlayer02.GetScore() > scorePlayer01.GetScore())
+                scorePlayer02.SumScoreFinal();
+            else
             {
-                playerWinText.text = "Player02 Win <3";
+                scorePlayer01.SumScoreFinal();
+                scorePlayer02.SumScoreFinal();
+            }
+
+            if (scorePlayer01.GetDeaths() > scorePlayer02.GetDeaths())
+                scorePlayer02.SumScoreFinal();
+            else if (scorePlayer02.GetDeaths() > scorePlayer01.GetDeaths())
+                scorePlayer01.SumScoreFinal();
+
+            if (scorePlayer01.GetScoreFinal() > scorePlayer02.GetScoreFinal() )
+            {
+                playerWinText.text = "Player01 Win ";
+            }
+            else if (scorePlayer02.GetScoreFinal() > scorePlayer01.GetScoreFinal())
+            {
+                playerWinText.text = "Player02 Win ";
             }
             else
                 playerWinText.text = "Empate";
         }
+    }
+    public void SetTimerGame(int valor)
+    {
+        timerGame = valor;
     }
 }

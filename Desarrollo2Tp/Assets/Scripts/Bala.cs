@@ -17,10 +17,11 @@ public class Bala : MonoBehaviour {
 	}
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        gameObject.SetActive(false);
+        if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.relativeVelocity * velImpulso, ForceMode.VelocityChange);
         }
-        gameObject.SetActive(false);
+       
     }
 }

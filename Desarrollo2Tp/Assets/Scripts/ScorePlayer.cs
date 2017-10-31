@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class ScorePlayer : MonoBehaviour {
     private int score;
+    private int deaths;
+    private int scoreFinal;
     void Start () {
         score = 0;
+        scoreFinal = 0;
 	}
 	void Update () {
 		
@@ -25,5 +28,21 @@ public class ScorePlayer : MonoBehaviour {
     public void SetScore(int valor)
     {
         score = valor;
+    }
+    public int GetDeaths()
+    {
+        return deaths;
+    }
+    public void SumDeaths()
+    {
+        deaths++;
+    }
+    public int GetScoreFinal()
+    {
+        return scoreFinal;
+    }
+    public void SumScoreFinal()
+    {
+        scoreFinal++;
     }
 }

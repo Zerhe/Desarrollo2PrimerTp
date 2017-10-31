@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DeathsUI : MonoBehaviour {
     [SerializeField]
-    private Respawn playerRespawn;
+    private ScorePlayer playerScore;
     private Text deathsText;
 
     void Awake()
@@ -17,7 +17,7 @@ public class DeathsUI : MonoBehaviour {
 
     void Update()
     {
-        deathsText.text = "Deaths: " + playerRespawn.GetDeaths();
+        deathsText.text = "Deaths: " + playerScore.GetDeaths();
 
     }
 }

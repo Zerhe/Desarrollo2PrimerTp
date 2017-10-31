@@ -85,7 +85,7 @@ public class MovPlayer : MonoBehaviour {
     }
     void Update ()
     {
-        print(pushVel);
+        //print(pushVel);
         if (coliPiso)
         {
             if (Input.GetButton(forwadButton))

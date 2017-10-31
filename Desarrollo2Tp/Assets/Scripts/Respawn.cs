@@ -11,7 +11,6 @@ public class Respawn : MonoBehaviour {
     [SerializeField]
     private ScorePlayer scoreOtherPlayer;
     private ScorePlayer scorePlayer;
-    private int deathsPlayer;
     [SerializeField]
     private float minRespawn;
     [SerializeField]
@@ -28,7 +27,7 @@ public class Respawn : MonoBehaviour {
             //scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
             //scorePlayer.SetScore(0);
             RespanwnRandom();
-            deathsPlayer++;
+            scorePlayer.SumDeaths();
         }
         if (Input.GetButton("Reset"))
             SceneManager.LoadScene("Game");
@@ -40,12 +39,9 @@ public class Respawn : MonoBehaviour {
         positionToRespawn.z = Random.Range(-minRespawn, maxRespawn);
         positionToRespawn += transformPoint.position;
         transform.position = positionToRespawn;
-        //rgb.velocity = Vector3.zero;
+        rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
-    }
-    public int GetDeaths()
-    {
-        return deathsPlayer;
+        //rgb.Sleep(); no funciona
     }
     public void SetTransformPoint(Transform valor)
     {
