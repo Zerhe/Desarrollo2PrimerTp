@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovPlayer : MonoBehaviour {
+public class MovPlayer : MonoBehaviour
+{
     private Rigidbody rgb;
     private bool coliPiso;
-    private bool forwad;
+    private bool forward;
     private bool back;
     private bool right;
     private bool left;
@@ -26,15 +27,15 @@ public class MovPlayer : MonoBehaviour {
         vel = 1.5f;
         pushVel = 0;
         impulsoVel = 2;
-        forwad = false;
+        forward = false;
         back = false;
         right = false;
         left = false;
         push = false;
     }
-    void Start ()
+    void Start()
     {
-        if(name == "Player1")
+        if (name == "Player1")
         {
             forwadButton = "ForwadP1";
             backButton = "BackP1";
@@ -53,7 +54,7 @@ public class MovPlayer : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        if (forwad)
+        if (forward)
         {
             rgb.AddRelativeForce(Vector3.forward * vel, ForceMode.VelocityChange);
         }
@@ -76,24 +77,23 @@ public class MovPlayer : MonoBehaviour {
         if (push)
         {
             //print("asd");
-            rgb.AddRelativeForce(Vector3.forward * pushVel , ForceMode.VelocityChange);
+            rgb.AddRelativeForce(Vector3.forward * pushVel, ForceMode.VelocityChange);
             pushVel = 0;
             push = false;
         }
         rgb.AddForce(Vector3.down * 50);
 
     }
-    void Update ()
+    void Update()
     {
-        //print(pushVel);
         if (coliPiso)
         {
             if (Input.GetButton(forwadButton))
             {
-                forwad = true;
+                forward = true;
             }
             else
-                forwad = false;
+                forward = false;
             if (Input.GetButton(backButton))
             {
                 back = true;
@@ -116,7 +116,7 @@ public class MovPlayer : MonoBehaviour {
             {
                 if (pushVel < 150)
                 {
-                    pushVel += Time.deltaTime*150;
+                    pushVel += Time.deltaTime * 150;
                 }
 
             }
@@ -125,6 +125,13 @@ public class MovPlayer : MonoBehaviour {
                 push = true;
             }
         }
+    }
+    public void ResetTeclas()
+    {
+        forward = false;
+        back = false;
+        right = false;
+        left = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -149,6 +156,7 @@ public class MovPlayer : MonoBehaviour {
         if (collision.gameObject.tag == "Plataforma")
         {
             coliPiso = false;
+            ResetTeclas();
         }
         if (collision.gameObject.layer == 8)
         {

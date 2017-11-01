@@ -7,6 +7,8 @@ TagManager:
   - Plataforma
   - Moneda
   - Player1
+  - Pared01
+  - Pared02
   layers:
   - Default
   - TransparentFX

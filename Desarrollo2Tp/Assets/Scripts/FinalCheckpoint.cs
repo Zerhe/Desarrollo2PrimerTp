@@ -19,11 +19,8 @@ public class FinalCheckpoint : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        print("daleguacha");
-
         if (other.gameObject.tag == "Player")
         {
-            print("daleguacho");
             timer.gameObject.SetActive(true);
             other.gameObject.GetComponent<ScorePlayer>().SumScoreFinal();
             playerEntry++;

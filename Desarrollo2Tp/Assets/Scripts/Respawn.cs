@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Respawn : MonoBehaviour {
-    private Vector3 positionToRespawn;
+public class Respawn : MonoBehaviour
+{
     [SerializeField]
     private Transform transformPoint;
     private Rigidbody rgb;
@@ -16,12 +16,19 @@ public class Respawn : MonoBehaviour {
     [SerializeField]
     private float maxRespawn;
 
-    void Start () {
+    void Awake()
+    {
         rgb = GetComponent<Rigidbody>();
         scorePlayer = GetComponent<ScorePlayer>();
-	}
-	
-	void Update () {
+
+    }
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
         if (transform.position.y < -15)
         {
             //scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
@@ -30,10 +37,11 @@ public class Respawn : MonoBehaviour {
             scorePlayer.SumDeaths();
         }
         if (Input.GetButton("Reset"))
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     void RespanwnRandom()
     {
+        Vector3 positionToRespawn;
         positionToRespawn.x = Random.Range(-minRespawn, maxRespawn);
         positionToRespawn.y = 25;
         positionToRespawn.z = Random.Range(-minRespawn, maxRespawn);
@@ -41,7 +49,7 @@ public class Respawn : MonoBehaviour {
         transform.position = positionToRespawn;
         rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
-        //rgb.Sleep(); no funciona
+        //gameObject.GetComponent<MovPlayer>().ResetTeclas();
     }
     public void SetTransformPoint(Transform valor)
     {
