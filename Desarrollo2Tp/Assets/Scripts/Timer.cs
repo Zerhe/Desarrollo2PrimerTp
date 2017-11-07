@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour {
     private ScorePlayer scorePlayer02;
     private float timer;
     [SerializeField]
-    private float timerGame;
+    private int timerGame;
     private bool sumTimer;
 
     void Awake () {
@@ -70,5 +70,9 @@ public class Timer : MonoBehaviour {
     public void SetTimerGame(int valor)
     {
         timerGame = valor;
+    }
+    public int GetTimerGame()
+    {
+        return timerGame;
     }
 }

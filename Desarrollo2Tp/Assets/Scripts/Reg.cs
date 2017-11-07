@@ -17,5 +17,8 @@ public class Reg : MonoBehaviour {
     {
         if (Input.GetButton("Cancel"))
             ChangeScene("Menu");
+        if (Input.GetButton("Reset"))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }

@@ -14,10 +14,8 @@ public class MovPlayer : MonoBehaviour
     private float vel;
     private float pushVel;
     private float impulsoVel;
-    private string forwadButton;
-    private string backButton;
-    private string rightButton;
-    private string leftButton;
+    private string moveXButton;
+    private string moveYButton;
     private string pushButton;
 
 
@@ -37,43 +35,27 @@ public class MovPlayer : MonoBehaviour
     {
         if (name == "Player1")
         {
-            forwadButton = "ForwadP1";
-            backButton = "BackP1";
-            rightButton = "RightP1";
-            leftButton = "LeftP1";
+            moveXButton = "MoveXP1";
+            moveYButton = "MoveYP1";
             pushButton = "PushP1";
         }
         else if (name == "Player2")
         {
-            forwadButton = "ForwadP2";
-            backButton = "BackP2";
-            rightButton = "RightP2";
-            leftButton = "LeftP2";
+            moveXButton = "MoveXP2";
+            moveYButton = "MoveYP2";
             pushButton = "PushP2";
         }
     }
     void FixedUpdate()
     {
-        if (forward)
-        {
-            rgb.AddRelativeForce(Vector3.forward * vel, ForceMode.VelocityChange);
-        }
-
-        if (back)
-        {
-            rgb.AddRelativeForce(Vector3.back * vel, ForceMode.VelocityChange);
-        }
-
         if (right)
-        {
             rgb.AddRelativeForce(Vector3.right * vel, ForceMode.VelocityChange);
-        }
-
         if (left)
-        {
             rgb.AddRelativeForce(Vector3.left * vel, ForceMode.VelocityChange);
-        }
-
+        if (forward)
+            rgb.AddRelativeForce(Vector3.forward * vel, ForceMode.VelocityChange);
+        if (back)
+            rgb.AddRelativeForce(Vector3.back * vel, ForceMode.VelocityChange);
         if (push)
         {
             //print("asd");
@@ -88,30 +70,22 @@ public class MovPlayer : MonoBehaviour
     {
         if (coliPiso)
         {
-            if (Input.GetButton(forwadButton))
-            {
-                forward = true;
-            }
-            else
-                forward = false;
-            if (Input.GetButton(backButton))
-            {
-                back = true;
-            }
-            else
-                back = false;
-            if (Input.GetButton(rightButton))
-            {
+            if (Input.GetAxis(moveXButton) > 0)
                 right = true;
-            }
             else
                 right = false;
-            if (Input.GetButton(leftButton))
-            {
+            if (Input.GetAxis(moveXButton) < 0)
                 left = true;
-            }
             else
                 left = false;
+            if (Input.GetAxis(moveYButton) > 0)
+                forward = true;
+            else
+                forward = false;
+            if (Input.GetAxis(moveYButton) < 0)
+                back = true;
+            else
+                back = false;
             if (Input.GetButton(pushButton))
             {
                 if (pushVel < 150)

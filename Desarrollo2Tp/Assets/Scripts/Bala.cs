@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bala : MonoBehaviour {
+public class Bala : MonoBehaviour
+{
     [SerializeField]
     private float velMov;
     [SerializeField]
     private float velImpulso;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
+    void Awake()
+    {
+
+    }
+
+    void Update()
+    {
         transform.Translate(Vector3.forward * velMov * Time.deltaTime);
-	}
+    }
     private void OnCollisionEnter(Collision collision)
     {
         gameObject.SetActive(false);
@@ -22,6 +25,6 @@ public class Bala : MonoBehaviour {
         {
             collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.relativeVelocity * velImpulso, ForceMode.VelocityChange);
         }
-       
+
     }
 }

@@ -24,7 +24,7 @@ public class Municion : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<DispararPlayer>().SumCantBalas(1);
+            other.gameObject.GetComponent<DispararPlayer>().SumCantBalas(10);
             Destroy(this.gameObject);
         }
     }

@@ -37,7 +37,7 @@ public class MovObject : MonoBehaviour
         }
         else if (vectorMover.y != 0)
         {
-            if (transform.position.y < positioniInicial.y)
+            if (transform.position.y < positioniInicial.y - rangoMov)
             {
                 movPos = true;
                 movneg = false;
@@ -50,7 +50,7 @@ public class MovObject : MonoBehaviour
         }
         else if (vectorMover.z != 0)
         {
-            if (transform.position.z < positioniInicial.z)
+            if (transform.position.z < positioniInicial.z - rangoMov)
             {
                 movPos = true;
                 movneg = false;

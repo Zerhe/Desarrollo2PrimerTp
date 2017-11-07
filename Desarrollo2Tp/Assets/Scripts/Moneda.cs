@@ -8,7 +8,6 @@ public class Moneda : MonoBehaviour {
     private float velRot;
     private Rigidbody rgb;
     private CapsuleCollider coll;
-    public int tutu;
 
     private void Awake()
     {
@@ -41,5 +40,9 @@ public class Moneda : MonoBehaviour {
     public int GetValor()
     {
         return valor;
+    }
+    public void SetValor(int value)
+    {
+        valor = value;
     }
 }

@@ -36,8 +36,6 @@ public class Respawn : MonoBehaviour
             RespanwnRandom();
             scorePlayer.SumDeaths();
         }
-        if (Input.GetButton("Reset"))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     void RespanwnRandom()
     {

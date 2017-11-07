@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DispararPlayer : MonoBehaviour {
+    [SerializeField]
     private int cantBalas;
     [SerializeField]
     private Transform spawnTransform;
@@ -11,6 +12,9 @@ public class DispararPlayer : MonoBehaviour {
     private GameObject[] balas = new GameObject[20];
     private string fireButton;
     private int n;
+    [SerializeField]
+    private Material balaMaterial;
+    private Color balaLightColor;
 
     private void Awake()
     {
@@ -18,19 +22,22 @@ public class DispararPlayer : MonoBehaviour {
         {
             case "Player1":
                 fireButton = "FireP1";
+                balaLightColor = Color.red;
                 break;
             case "Player2":
                 fireButton = "FireP2";
+                balaLightColor = Color.blue;
                 break;
         }
     }
     void Start ()
     {
-        cantBalas = 100;
         n = 0;
         for (int i = 0; i < balas.Length; i++)
         {
             balas[i] = Instantiate(bala, spawnTransform.position , spawnTransform.rotation);
+            balas[i].GetComponent<Light>().color = balaLightColor;
+            balas[i].GetComponent<MeshRenderer>().material = balaMaterial;
             balas[i].SetActive(false);
         }
     }
