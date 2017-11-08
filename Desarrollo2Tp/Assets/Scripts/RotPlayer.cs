@@ -41,14 +41,18 @@ public class RotPlayer : MonoBehaviour {
     }
     void Update() {
 
-        rotRight = Input.GetButton(rotRightButton);
+        if (Input.GetButton(rotRightButton))
+        {
+            //print("rotooo");
+            rotRight = true;
+        }
         rotLeft = Input.GetButton(rotLeftButton);
 
 
-        /*if(rgb.rotation.x > 0.3)
+        if(rgb.rotation.x > 0.3)
             rgb.rotation = Quaternion.Euler(0.3f, rgb.rotation.y, rgb.rotation.z);
         else if (rgb.rotation.x < -0.3)
-            rgb.rotation = Quaternion.Euler(-0.3f, rgb.rotation.y, rgb.rotation.z);*/
+            rgb.rotation = Quaternion.Euler(-0.3f, rgb.rotation.y, rgb.rotation.z);
         if (rgb.rotation.eulerAngles.z > 15 && rgb.rotation.eulerAngles.z < 300)
             rgb.rotation = Quaternion.Euler(rgb.rotation.eulerAngles.x, rgb.rotation.eulerAngles.y, 15f);
         else if (rgb.rotation.eulerAngles.z < 345 && rgb.rotation.eulerAngles.z > 300)

@@ -158,7 +158,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Modo 3
+  m_Text: 'Modo 3
+
+
+    Sobrevive mas tiempo que tu rival.'
 --- !u!222 &31558619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -539,7 +542,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Modo 1
+  m_Text: 'Modo 1
+
+
+    Junta mas monedas que tu rival y trata de derribarlo de la plataforma.'
 --- !u!222 &434362957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -857,7 +863,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Modo 2
+  m_Text: 'Modo 2
+
+
+    Llega a la meta antes que tu rival, juntando monedas y sin morir demasiado.'
 --- !u!222 &1483127354
 CanvasRenderer:
   m_ObjectHideFlags: 0

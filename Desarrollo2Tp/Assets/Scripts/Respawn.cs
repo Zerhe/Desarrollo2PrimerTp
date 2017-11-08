@@ -12,6 +12,8 @@ public class Respawn : MonoBehaviour
     private ScorePlayer scoreOtherPlayer;
     private ScorePlayer scorePlayer;
     [SerializeField]
+    private Timer timer;
+    [SerializeField]
     private float minRespawn;
     [SerializeField]
     private float maxRespawn;
@@ -31,10 +33,16 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < -15)
         {
-            //scoreOtherPlayer.SetScore(scoreOtherPlayer.GetScore() + scorePlayer.GetScore());
-            //scorePlayer.SetScore(0);
-            RespanwnRandom();
-            scorePlayer.SumDeaths();
+            if (SceneManager.GetActiveScene().name != "Game3")
+            {
+                RespanwnRandom();
+                scorePlayer.SumDeaths();
+            }
+            else
+            {
+                scoreOtherPlayer.SumScoreFinal();
+                timer.SetTimerGame(0);
+            }
         }
     }
     void RespanwnRandom()
@@ -47,7 +55,6 @@ public class Respawn : MonoBehaviour
         transform.position = positionToRespawn;
         rgb.velocity = Vector3.zero;
         rgb.angularVelocity = Vector3.zero;
-        //gameObject.GetComponent<MovPlayer>().ResetTeclas();
     }
     public void SetTransformPoint(Transform valor)
     {

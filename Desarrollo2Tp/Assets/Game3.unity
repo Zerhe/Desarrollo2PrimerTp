@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 7
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -25,7 +25,6 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0, g: 1, b: 0.007352948, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: d835facf39e7566448f88ccf91eabf39, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -37,12 +36,12 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 910603856}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 7
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +53,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 4
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -67,27 +66,13 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 1
-    m_BakeBackend: 0
-    m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
-    m_PVRBounces: 2
-    m_PVRFiltering: 0
-    m_PVRFilteringMode: 1
-    m_PVRCulling: 1
-    m_PVRFilteringGaussRadiusDirect: 1
-    m_PVRFilteringGaussRadiusIndirect: 5
-    m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -104,8 +89,6 @@ NavMeshSettings:
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.16666667
-    manualTileSize: 0
-    tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &9024736
@@ -159,7 +142,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!65 &9024738
 BoxCollider:
@@ -227,7 +209,7 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9024736}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.4068966, g: 1, b: 0, a: 1}
   m_Intensity: 5
@@ -252,22 +234,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1001 &30564590
@@ -453,7 +419,7 @@ Canvas:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 103171433}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
@@ -462,7 +428,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -773,18 +738,34 @@ Prefab:
     - target: {fileID: 114962098675282264, guid: b76fef516561f974db0854607773e034,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114652671135197056, guid: b76fef516561f974db0854607773e034,
         type: 2}
       propertyPath: cantBalas
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114652671135197056, guid: b76fef516561f974db0854607773e034,
         type: 2}
       propertyPath: balaMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 443ef9e33a213cd45bd68090758fce40, type: 2}
+    - target: {fileID: 114652671135197056, guid: b76fef516561f974db0854607773e034,
+        type: 2}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 352842588}
+    - target: {fileID: 114652671135197056, guid: b76fef516561f974db0854607773e034,
+        type: 2}
+      propertyPath: bala
+      value: 
+      objectReference: {fileID: 1333858499613514, guid: f9d25c144f31cab43bb6c9d505d264da,
+        type: 2}
+    - target: {fileID: 114962098675282264, guid: b76fef516561f974db0854607773e034,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 331413533}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b76fef516561f974db0854607773e034, type: 2}
   m_IsPrefabParent: 0
@@ -889,6 +870,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4128324057190672, guid: 896d10349df2b664ea6e2c8e6977a1d4,
     type: 2}
   m_PrefabInternal: {fileID: 868664273}
+--- !u!4 &352842588 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4542244752871230, guid: b76fef516561f974db0854607773e034,
+    type: 2}
+  m_PrefabInternal: {fileID: 212182734}
 --- !u!1 &389454093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1350,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 695055311}
+--- !u!4 &745750580 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4003599977754332, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+    type: 2}
+  m_PrefabInternal: {fileID: 927034785}
 --- !u!1 &778153141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1580,7 @@ Light:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910603855}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
@@ -1614,22 +1605,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &910603857
@@ -1843,18 +1818,34 @@ Prefab:
     - target: {fileID: 114524563142252780, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114601563562825118, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
         type: 2}
       propertyPath: cantBalas
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114601563562825118, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
         type: 2}
       propertyPath: balaMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 8184a7d0d8c73274eab30c9164f16a60, type: 2}
+    - target: {fileID: 114601563562825118, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+        type: 2}
+      propertyPath: spawnTransform
+      value: 
+      objectReference: {fileID: 745750580}
+    - target: {fileID: 114601563562825118, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+        type: 2}
+      propertyPath: bala
+      value: 
+      objectReference: {fileID: 1333858499613514, guid: f9d25c144f31cab43bb6c9d505d264da,
+        type: 2}
+    - target: {fileID: 114524563142252780, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 331413533}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e19ef92bcdcc8241b87b07f06c0cf31, type: 2}
   m_IsPrefabParent: 0
@@ -2202,7 +2193,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687132481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e9ef1ae3934e7742ad4e3d77b5cd8ba, type: 3}
   m_Name: 
