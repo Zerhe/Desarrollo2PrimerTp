@@ -6,12 +6,23 @@ public class Enemigo : MonoBehaviour {
 
     [SerializeField]
     private float velMov;
+    [SerializeField]
+    private float velAum;
     private Vector3 direccion;
+    private float timer;
 	void Start () {
         DireccionRandom();
 	}
 	void Update () {
         transform.Translate(direccion * Time.deltaTime * velMov);
+        timer += Time.deltaTime;
+        if (timer > 4)
+        {
+            velMov += velAum;
+            timer = 0;
+        }
+        if (velMov > 25)
+            velMov = 25;
 	}
     void DireccionRandom()
     {
@@ -31,9 +42,8 @@ public class Enemigo : MonoBehaviour {
                 break;
             }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        print("asd");
         if (collision.gameObject.tag == "Pared01")
         {
             if (direccion == Vector3.right + Vector3.forward)

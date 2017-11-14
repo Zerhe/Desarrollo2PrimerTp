@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScorePlayer : MonoBehaviour {
     private int score;
     private int deaths;
+    private int scorePunto;
     private int scoreFinal;
     void Start () {
         score = 0;

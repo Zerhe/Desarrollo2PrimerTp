@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
-    private Text timerText;
     [SerializeField]
     private GameObject panelWin;
     [SerializeField]
@@ -13,9 +13,12 @@ public class Timer : MonoBehaviour {
     private ScorePlayer scorePlayer01;
     [SerializeField]
     private ScorePlayer scorePlayer02;
-    private float timer;
     [SerializeField]
     private int timerGame;
+    [SerializeField]
+    private PlataformaPunto plataformaPunto;
+    private float timer;
+    private Text timerText;
     private bool sumTimer;
 
     void Awake () {
@@ -29,7 +32,7 @@ public class Timer : MonoBehaviour {
     void Update () {
         if (sumTimer)
             timer += Time.deltaTime;
-        if (timer >= 1)
+        if (timer >= 3)
         {
             timerGame--;
             timer = 0;
@@ -55,14 +58,18 @@ public class Timer : MonoBehaviour {
             else if (scorePlayer02.GetDeaths() > scorePlayer01.GetDeaths())
                 scorePlayer01.SumScoreFinal();
 
+            if (SceneManager.GetActiveScene().name == "Game")
+            {
+                if (plataformaPunto.GetValorPunto() > 0)
+                    scorePlayer01.SumScoreFinal();
+                else if (plataformaPunto.GetValorPunto() < 0)
+                    scorePlayer02.SumScoreFinal();
+            }
+
             if (scorePlayer01.GetScoreFinal() > scorePlayer02.GetScoreFinal() )
-            {
                 playerWinText.text = "Player01 Win ";
-            }
             else if (scorePlayer02.GetScoreFinal() > scorePlayer01.GetScoreFinal())
-            {
                 playerWinText.text = "Player02 Win ";
-            }
             else
                 playerWinText.text = "Empate";
         }
