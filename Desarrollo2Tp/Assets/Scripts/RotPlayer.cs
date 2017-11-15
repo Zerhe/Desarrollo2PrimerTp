@@ -7,8 +7,7 @@ public class RotPlayer : MonoBehaviour {
     private float velRot;
     private bool rotRight;
     private bool rotLeft;
-    private string rotRightButton;
-    private string rotLeftButton;
+    private string rotXButton;
 
 	void Awake () {
         rgb = GetComponent<Rigidbody>();
@@ -16,15 +15,9 @@ public class RotPlayer : MonoBehaviour {
         rotRight = false;
         rotLeft = false;
         if (name == "Player1")
-        {
-            rotRightButton = "RotRP1";
-            rotLeftButton = "RotLP1";
-        }
+            rotXButton = "RotXP1";
         else if (name == "Player2")
-        {
-            rotRightButton = "RotRP2";
-            rotLeftButton = "RotLP2";
-        }
+            rotXButton = "RotXP2";
     }
     void FixedUpdate()
     {
@@ -41,12 +34,10 @@ public class RotPlayer : MonoBehaviour {
     }
     void Update() {
 
-        if (Input.GetButton(rotRightButton))
-        {
-            //print("rotooo");
+        if (Input.GetAxis(rotXButton) > 0)
             rotRight = true;
-        }
-        rotLeft = Input.GetButton(rotLeftButton);
+        else if (Input.GetAxis(rotXButton) < 0)
+            rotLeft = true;
 
 
         if(rgb.rotation.x > 0.3)

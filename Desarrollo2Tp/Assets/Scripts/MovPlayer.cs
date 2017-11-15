@@ -79,13 +79,13 @@ public class MovPlayer : MonoBehaviour
             else
                 left = false;
             if (Input.GetAxis(moveYButton) > 0)
-                forward = true;
-            else
-                forward = false;
-            if (Input.GetAxis(moveYButton) < 0)
                 back = true;
             else
                 back = false;
+            if (Input.GetAxis(moveYButton) < 0)
+                forward = true;
+            else
+                forward = false;
             if (Input.GetButton(pushButton))
             {
                 if (pushVel < 150)
