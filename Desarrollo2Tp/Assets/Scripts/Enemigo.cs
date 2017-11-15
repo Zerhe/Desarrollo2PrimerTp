@@ -21,8 +21,8 @@ public class Enemigo : MonoBehaviour {
             velMov += velAum;
             timer = 0;
         }
-        if (velMov > 25)
-            velMov = 25;
+        if (velMov > 20)
+            velMov = 20;
 	}
     void DireccionRandom()
     {

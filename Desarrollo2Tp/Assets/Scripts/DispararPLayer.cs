@@ -51,6 +51,7 @@ public class DispararPlayer : MonoBehaviour {
         {
             balas[n].transform.position = spawnTransform.position;
             balas[n].transform.rotation = spawnTransform.rotation;
+            balas[n].GetComponent<Rigidbody>().Sleep();
             balas[n].SetActive(true);
             cantBalas--;
             n++;

@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private ScorePlayer scorePlayer02;
     [SerializeField]
-    private int timerGame;
+    private float timerGame;
     [SerializeField]
     private PlataformaPunto plataformaPunto;
     private float timer;
@@ -78,7 +78,7 @@ public class Timer : MonoBehaviour {
     {
         timerGame = valor;
     }
-    public int GetTimerGame()
+    public float GetTimerGame()
     {
         return timerGame;
     }

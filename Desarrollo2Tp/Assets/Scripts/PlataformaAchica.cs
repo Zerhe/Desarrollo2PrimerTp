@@ -6,7 +6,7 @@ public class PlataformaAchica : MonoBehaviour {
     [SerializeField]
     private Timer timer;
     private Vector3 nuevaScala;
-    private int maxTimerGame;
+    private float maxTimerGame;
     private float maxX;
     private float maxZ;
     private float achicar;
@@ -19,11 +19,11 @@ public class PlataformaAchica : MonoBehaviour {
     }
 
     void Update () {
-        print(achicar);
         achicar = timer.GetTimerGame() / maxTimerGame;
         nuevaScala.x = maxX * achicar;
+        nuevaScala.y = transform.localScale.y;
         nuevaScala.z = maxZ * achicar;
 
         transform.localScale = nuevaScala;
-	}
+    }
 }

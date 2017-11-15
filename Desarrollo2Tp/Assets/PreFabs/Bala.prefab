@@ -75,7 +75,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33884554157826110
 MeshFilter:
@@ -106,7 +105,7 @@ Light:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333858499613514}
   m_Enabled: 1
-  serializedVersion: 8
+  serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.90344834, g: 1, b: 0, a: 1}
   m_Intensity: 1
@@ -131,22 +130,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &114934989105598872
@@ -160,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede6f57b163bc54880ad4cc1cc2229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velMov: 60
-  velImpulso: 200
+  velMov: 100
+  velImpulso: 1
 --- !u!135 &135553864363475128
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -8,23 +8,23 @@ public class Bala : MonoBehaviour
     private float velMov;
     [SerializeField]
     private float velImpulso;
+    private Rigidbody rgb;
 
-    void Awake()
+    private void Awake()
     {
-
+        rgb = GetComponent<Rigidbody>();
     }
-
-    void Update()
+    private void Start()
     {
-        transform.Translate(Vector3.forward * velMov * Time.deltaTime);
+        rgb.AddRelativeForce(Vector3.forward * velMov, ForceMode.VelocityChange);
     }
     private void OnCollisionEnter(Collision collision)
-    {
-        gameObject.SetActive(false);
+    {        
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.relativeVelocity * velImpulso, ForceMode.VelocityChange);
+            print(rgb.velocity);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(rgb.velocity * velImpulso , ForceMode.VelocityChange);
         }
-
+        gameObject.SetActive(false);
     }
 }
