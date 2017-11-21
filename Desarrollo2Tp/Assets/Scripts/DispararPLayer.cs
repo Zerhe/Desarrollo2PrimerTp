@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DispararPlayer : MonoBehaviour {
+public class DispararPlayer : MonoBehaviour
+{
     [SerializeField]
     private int cantBalas;
     [SerializeField]
@@ -30,19 +31,19 @@ public class DispararPlayer : MonoBehaviour {
                 break;
         }
     }
-    void Start ()
+    void Start()
     {
         n = 0;
         for (int i = 0; i < balas.Length; i++)
         {
-            balas[i] = Instantiate(bala, spawnTransform.position , spawnTransform.rotation);
+            balas[i] = Instantiate(bala, spawnTransform.position, spawnTransform.rotation);
             balas[i].GetComponent<Light>().color = balaLightColor;
             balas[i].GetComponent<MeshRenderer>().material = balaMaterial;
             balas[i].SetActive(false);
         }
     }
-	
-	void Update ()
+
+    void Update()
     {
         if (n == balas.Length)
             n = 0;
@@ -51,12 +52,11 @@ public class DispararPlayer : MonoBehaviour {
         {
             balas[n].transform.position = spawnTransform.position;
             balas[n].transform.rotation = spawnTransform.rotation;
-            balas[n].GetComponent<Rigidbody>().Sleep();
             balas[n].SetActive(true);
             cantBalas--;
             n++;
         }
-	}
+    }
     public int GetCantBalas()
     {
         return cantBalas;
