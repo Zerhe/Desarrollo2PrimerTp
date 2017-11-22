@@ -63,7 +63,7 @@ public class MovPlayer : MonoBehaviour
             pushVel = 0;
             push = false;
         }
-        rgb.AddForce(Vector3.down * 50);
+        rgb.AddForce(Vector3.down * 80);
 
     }
     void Update()

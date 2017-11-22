@@ -173,8 +173,6 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -209,7 +207,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23551455214964322
 MeshRenderer:
@@ -241,7 +238,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33362280211700764
 MeshFilter:
@@ -320,7 +316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f244c69f32d636f48b099a9d426cbabd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformPoint: {fileID: 0}
   scoreOtherPlayer: {fileID: 0}
+  timer: {fileID: 0}
+  minRespawn: 0
+  maxRespawn: 0
 --- !u!114 &114549637928343496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,11 +340,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1567826535566646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9f53fb10ab6ed418deb1987ebdf204, type: 3}
+  m_Script: {fileID: 11500000, guid: 474bdb70db78a9141a5e06da22aaf95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTransform: {fileID: 4003599977754332}
-  bala: {fileID: 1333858499613514, guid: f9d25c144f31cab43bb6c9d505d264da, type: 2}
+  cantBalas: 0
+  spawnTransform: {fileID: 0}
+  bala: {fileID: 0}
+  balaMaterial: {fileID: 0}
 --- !u!114 &114744790325118302
 MonoBehaviour:
   m_ObjectHideFlags: 1

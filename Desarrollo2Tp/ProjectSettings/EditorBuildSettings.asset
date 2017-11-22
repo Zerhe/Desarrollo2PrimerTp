@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Game2.unity
   - enabled: 1
     path: Assets/Game3.unity
+  - enabled: 1
+    path: Assets/Creditos.unity

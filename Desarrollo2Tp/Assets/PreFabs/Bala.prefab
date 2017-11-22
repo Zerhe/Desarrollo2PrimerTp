@@ -108,7 +108,7 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.90344834, g: 1, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede6f57b163bc54880ad4cc1cc2229e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velMov: 100
+  velMov: 50
   velImpulso: 1
 --- !u!135 &135553864363475128
 SphereCollider:

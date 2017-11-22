@@ -16,7 +16,7 @@ public class Bala : MonoBehaviour
     }
     private void Start()
     {
-        rgb.AddRelativeForce(Vector3.forward * velMov, ForceMode.VelocityChange);
+		AddVelocity();
     }
     private void OnCollisionEnter(Collision collision)
     {        
@@ -27,4 +27,8 @@ public class Bala : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+	public void AddVelocity()
+	{
+		rgb.AddRelativeForce(Vector3.forward * velMov, ForceMode.VelocityChange);
+	}
 }
