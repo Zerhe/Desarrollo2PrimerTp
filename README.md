@@ -13,6 +13,6 @@ Trello:
 https://trello.com/b/qODlaD9P/primer-tp-desarrolo-2
 
 ScreenShots:
-![alt text] (imagen01.png)
-![alt text] (imagen02.png)
+<img src="imagen01" />
+<img src="imagen02" />
 
