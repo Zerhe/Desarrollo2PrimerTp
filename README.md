@@ -50,8 +50,3 @@ https://trello.com/b/qODlaD9P/primer-tp-desarrolo-2
 
 Itch.io:
 https://zerhe.itch.io/pushisfun
-
-ScreenShots:
-<img src="imagen01.png" />
-<img src="imagen02.png" />
-
