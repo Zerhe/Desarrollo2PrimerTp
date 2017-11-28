@@ -41,6 +41,8 @@ Audio
 Amarilla Rodrigo
 https://freesound.org/people/Mativve/sounds/391538/
 https://freesound.org/people/edtijo/sounds/238913/
+https://freesound.org/people/Darkmast49/sounds/157846/
+https://freesound.org/people/luckylittleraven/sounds/202221/
 
 Skyboxs
 https://93i.de/p/free-skybox-texture-set/
