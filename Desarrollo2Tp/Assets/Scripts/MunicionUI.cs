@@ -17,7 +17,7 @@ public class MunicionUI : MonoBehaviour {
 
     void Update()
     {
-        municionText.text = "Municion: " + playerWeapon.GetCantBalas();
+        municionText.text = "x" + playerWeapon.GetCantBalas();
 
     }
 }

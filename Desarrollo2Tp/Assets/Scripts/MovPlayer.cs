@@ -17,11 +17,15 @@ public class MovPlayer : MonoBehaviour
     private string moveXButton;
     private string moveYButton;
     private string pushButton;
+    [SerializeField]
+    private AudioClip pushSong;
+    private AudioController audCon;
 
 
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
+        audCon = GetComponent<AudioController>();
         vel = 1.5f;
         pushVel = 0;
         impulsoVel = 2;
@@ -58,10 +62,10 @@ public class MovPlayer : MonoBehaviour
             rgb.AddRelativeForce(Vector3.back * vel, ForceMode.VelocityChange);
         if (push)
         {
-            //print("asd");
             rgb.AddRelativeForce(Vector3.forward * pushVel, ForceMode.VelocityChange);
             pushVel = 0;
             push = false;
+            audCon.PlayAudio(pushSong);
         }
         rgb.AddForce(Vector3.down * 80);
 

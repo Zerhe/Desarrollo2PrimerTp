@@ -16,6 +16,9 @@ public class DispararPlayer : MonoBehaviour
     [SerializeField]
     private Material balaMaterial;
     private Color balaLightColor;
+    private AudioController audCon;
+    [SerializeField]
+    private AudioClip disparoSong;
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class DispararPlayer : MonoBehaviour
                 balaLightColor = Color.blue;
                 break;
         }
+        audCon = GetComponent<AudioController>();
     }
     void Start()
     {
@@ -52,9 +56,10 @@ public class DispararPlayer : MonoBehaviour
         {
             balas[n].transform.position = spawnTransform.position;
             balas[n].transform.rotation = spawnTransform.rotation;
+            balas[n].GetComponent<Rigidbody>().Sleep();
             balas[n].SetActive(true);
-			balas[n].GetComponent<Rigidbody>().Sleep();
 			balas[n].GetComponent<Bala>().AddVelocity();
+            audCon.PlayAudio(disparoSong);
             cantBalas--;
             n++;
         }

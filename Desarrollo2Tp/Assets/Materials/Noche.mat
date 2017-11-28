@@ -7,43 +7,55 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Noche
-  m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BackTex:
+        m_Texture: {fileID: 2800000, guid: 95d374b699342aa45bd9488b06a9a436, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DownTex:
+        m_Texture: {fileID: 2800000, guid: 37f92c0e7f31f1c4db7482e343482225, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FrontTex:
+        m_Texture: {fileID: 2800000, guid: c74d06155bff63549b88cb622a6d867e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LeftTex:
+        m_Texture: {fileID: 2800000, guid: c43f0b191c4076a45a3590d2a86782e9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RightTex:
+        m_Texture: {fileID: 2800000, guid: 673f7df5c177e76478cc1c6699b55cb7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UpTex:
+        m_Texture: {fileID: 2800000, guid: e72db724edc8419448921cdf41b4a719, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
-    - first:
-        name: _AtmosphereThickness
-      second: 0
-    - first:
-        name: _Exposure
-      second: 0.4
-    - first:
-        name: _SunDisk
-      second: 2
-    - first:
-        name: _SunSize
-      second: 0.1
+    - <noninit>: 0
+    - _AtmosphereThickness: 0
+    - _Exposure: 0.4
+    - _Rotation: 0
+    - _SunDisk: 2
+    - _SunSize: 0.1
+    - _SunSizeConvergence: 5
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 1.1928963e-34, b: 0, a: 1.1928889e-34}
-    - first:
-        name: _GroundColor
-      second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _SkyTint
-      second: {r: 0, g: 0, b: 0, a: 1}
+    - <noninit>: {r: 0, g: 1.1928963e-34, b: 0, a: 1.1928889e-34}
+    - _GroundColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SkyTint: {r: 0, g: 0, b: 0, a: 1}
+    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

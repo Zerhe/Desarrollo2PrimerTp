@@ -14,7 +14,7 @@ public class ScoreUI : MonoBehaviour {
     }
 	
 	void Update () {
-        scoreText.text = "Score: " + playerScore.GetScore();
+        scoreText.text = "x" + playerScore.GetScore();
 
     }
 }

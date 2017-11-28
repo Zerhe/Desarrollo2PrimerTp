@@ -9,14 +9,20 @@ public class Bala : MonoBehaviour
     [SerializeField]
     private float velImpulso;
     private Rigidbody rgb;
+    private float timer;
 
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
     }
-    private void Start()
+    private void Update()
     {
-		AddVelocity();
+        timer += Time.deltaTime;
+        if (timer > 2)
+        {
+            gameObject.SetActive(false);
+            timer = 0;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {        
@@ -26,6 +32,7 @@ public class Bala : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody>().AddForce(rgb.velocity * velImpulso , ForceMode.VelocityChange);
         }
         gameObject.SetActive(false);
+        timer = 0;
     }
 	public void AddVelocity()
 	{

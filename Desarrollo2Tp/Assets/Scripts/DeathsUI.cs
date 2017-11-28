@@ -17,7 +17,7 @@ public class DeathsUI : MonoBehaviour {
 
     void Update()
     {
-        deathsText.text = "Deaths: " + playerScore.GetDeaths();
+        deathsText.text = "x" + playerScore.GetDeaths();
 
     }
 }

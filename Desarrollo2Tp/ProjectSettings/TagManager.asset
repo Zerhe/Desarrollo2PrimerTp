@@ -9,6 +9,8 @@ TagManager:
   - Player1
   - Pared01
   - Pared02
+  - GlobalObject
+  - Municion
   layers:
   - Default
   - TransparentFX
