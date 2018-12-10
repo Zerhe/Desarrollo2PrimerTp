@@ -9,9 +9,9 @@ public class Bazuka : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (other.gameObject.transform.GetChild(0).gameObject.activeInHierarchy == false)
+            if (other.gameObject.transform.GetChild(1).gameObject.activeInHierarchy == false)
             {
-                other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                other.gameObject.transform.GetChild(1).gameObject.SetActive(true);
                 gameObject.SetActive(false);
             }
         }

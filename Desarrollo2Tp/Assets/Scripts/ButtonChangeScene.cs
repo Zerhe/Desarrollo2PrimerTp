@@ -15,7 +15,10 @@ public class ButtonChangeScene : MonoBehaviour {
 	}
     void Start()
     {
-        button.onClick.AddListener(delegate () { functions.ChangeScene(sceneLoadName); });
+        if(sceneLoadName != "Exit")
+            button.onClick.AddListener(delegate () { functions.ChangeScene(sceneLoadName); });
+        else
+            button.onClick.AddListener(delegate () { functions.Exit(); });
 
     }
 }

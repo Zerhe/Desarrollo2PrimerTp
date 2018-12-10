@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 1620884966}
   - component: {fileID: 1620884968}
   - component: {fileID: 1620884967}
+  - component: {fileID: 1620884969}
   m_Layer: 5
   m_Name: CreditosText
   m_TagString: Untagged
@@ -359,8 +360,8 @@ RectTransform:
   m_Father: {fileID: 1881099218}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.039332755, y: 0.06614921}
-  m_AnchorMax: {x: 0.96331275, y: 0.93700004}
+  m_AnchorMin: {x: 0.36063144, y: -0.3565192}
+  m_AnchorMax: {x: 0.65965104, y: 0.9125301}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -396,7 +397,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programacion\nAmarilla Rodrigo\n\nDise\xF1o de nivel\nAmarilla Rodrigo\n\nTexturas\nMafubash\r\n\r\nAudio\nAmarilla
+  m_Text: "Programacion\nAmarilla Rodrigo\n\nDise\xF1o de nivel\nAmarilla Rodrigo\n\nModelos
+    3D\nSunixDev\r\n\rPopup Asylum\r\n\nTexturas\nMafubash\r\n\r\nAudio\nAmarilla
     Rodrigo\nMativve\nedtijo\nDarkmast49\nluckylittleraven\n\nSkyboxs\n93-interactive"
 --- !u!222 &1620884968
 CanvasRenderer:
@@ -404,6 +406,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620884965}
+--- !u!114 &1620884969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620884965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb60ba000fbe2564685bdc38b718ac75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velMov: 15
 --- !u!1 &1875154564
 GameObject:
   m_ObjectHideFlags: 0

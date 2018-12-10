@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Reg : MonoBehaviour {
+public class Reg : MonoBehaviour
+{
+    [SerializeField]
+    private AudioClip MenuSong;
     [SerializeField]
     private AudioClip Modo1Song;
     [SerializeField]
@@ -13,7 +16,10 @@ public class Reg : MonoBehaviour {
     private AudioSource aud;
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        if (FindObjectsOfType<Reg>().Length == 1)
+            DontDestroyOnLoad(transform.gameObject);
+        else
+            Destroy(gameObject);
         aud = GetComponent<AudioSource>();
     }
     public void ChangeScene(string nameScene)
@@ -21,7 +27,7 @@ public class Reg : MonoBehaviour {
         SceneManager.LoadScene(nameScene);
         if (nameScene == "Menu")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         if (nameScene == "Game")
         {
@@ -48,7 +54,11 @@ public class Reg : MonoBehaviour {
         if (Input.GetButton("Cancel"))
         {
             ChangeScene("Menu");
-            Destroy(gameObject);
+            if (aud.clip != MenuSong)
+            { 
+                aud.clip = MenuSong;
+                aud.Play();
+            }
         }
         if (Input.GetButton("Reset"))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

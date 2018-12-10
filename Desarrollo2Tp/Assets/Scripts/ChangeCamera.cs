@@ -17,7 +17,7 @@ public class ChangeCamera : MonoBehaviour {
     }
 	
 	void Update () {
-		if (Input.GetButton(cameraButton))
+		if (Input.GetButtonDown(cameraButton))
         {
             if(camera01.activeInHierarchy)
             {

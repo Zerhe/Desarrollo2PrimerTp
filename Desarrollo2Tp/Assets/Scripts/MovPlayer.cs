@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovPlayer : MonoBehaviour
 {
     private Rigidbody rgb;
+    private Animator anim;
     private bool coliPiso;
     private bool forward;
     private bool back;
@@ -25,6 +26,7 @@ public class MovPlayer : MonoBehaviour
     private void Awake()
     {
         rgb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
         audCon = GetComponent<AudioController>();
         vel = 1.5f;
         pushVel = 0;
@@ -49,6 +51,7 @@ public class MovPlayer : MonoBehaviour
             moveYButton = "MoveYP2";
             pushButton = "PushP2";
         }
+        anim.SetBool("Idle", true);
     }
     void FixedUpdate()
     {
@@ -65,6 +68,7 @@ public class MovPlayer : MonoBehaviour
             rgb.AddRelativeForce(Vector3.forward * pushVel, ForceMode.VelocityChange);
             pushVel = 0;
             push = false;
+            anim.ResetTrigger("Push");
             audCon.PlayAudio(pushSong);
         }
         rgb.AddForce(Vector3.down * 80);
@@ -75,21 +79,78 @@ public class MovPlayer : MonoBehaviour
         if (coliPiso)
         {
             if (Input.GetAxis(moveXButton) > 0)
+            {
                 right = true;
+                anim.SetBool("Idle", false);
+                anim.SetBool("Forwad", false);
+                anim.SetBool("Back", false);
+                anim.SetBool("Left", false);
+                anim.SetBool("Right", true);
+            }
             else
+            {
                 right = false;
+                if(anim.GetBool("Right"))
+                {
+                anim.SetBool("Right", false);
+                anim.SetBool("Idle", true);
+
+                }
+            }
             if (Input.GetAxis(moveXButton) < 0)
+            {
                 left = true;
+                anim.SetBool("Idle", false);
+                anim.SetBool("Forwad", false);
+                anim.SetBool("Back", false);
+                anim.SetBool("Right", false);
+                anim.SetBool("Left", true);
+            }
             else
+            {
                 left = false;
+                if (anim.GetBool("Left"))
+                {
+                    anim.SetBool("Left", false);
+                    anim.SetBool("Idle", true);
+                }
+            }
             if (Input.GetAxis(moveYButton) > 0)
+            {
                 back = true;
+                anim.SetBool("Idle", false);
+                anim.SetBool("Forwad", false);
+                anim.SetBool("Right", false);
+                anim.SetBool("Left", false);
+                anim.SetBool("Back", true);
+            }
             else
+            {
                 back = false;
+                if (anim.GetBool("Back"))
+                {
+                    anim.SetBool("Back", false);
+                    anim.SetBool("Idle", true);
+                }
+            }
             if (Input.GetAxis(moveYButton) < 0)
+            {
                 forward = true;
+                anim.SetBool("Idle", false);
+                anim.SetBool("Back", false);
+                anim.SetBool("Right", false);
+                anim.SetBool("Left", false);
+                anim.SetBool("Forwad", true);
+            }
             else
+            {
                 forward = false;
+                if (anim.GetBool("Forwad"))
+                {
+                    anim.SetBool("Forwad", false);
+                    anim.SetBool("Idle", true);
+                }
+            }
             if (Input.GetButton(pushButton))
             {
                 if (pushVel < 150)
@@ -101,6 +162,7 @@ public class MovPlayer : MonoBehaviour
             if (Input.GetButtonUp(pushButton))
             {
                 push = true;
+                anim.SetTrigger("Push");
             }
         }
     }
