@@ -14,6 +14,8 @@ public class Respawn : MonoBehaviour
     [SerializeField]
     private Timer timer;
     [SerializeField]
+    float height;
+    [SerializeField]
     private float minRespawn;
     [SerializeField]
     private float maxRespawn;
@@ -49,7 +51,7 @@ public class Respawn : MonoBehaviour
     {
         Vector3 positionToRespawn;
         positionToRespawn.x = Random.Range(-minRespawn, maxRespawn);
-        positionToRespawn.y = 25;
+        positionToRespawn.y = height;
         positionToRespawn.z = Random.Range(-minRespawn, maxRespawn);
         positionToRespawn += transformPoint.position;
         transform.position = positionToRespawn;

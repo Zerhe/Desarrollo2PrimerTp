@@ -52,7 +52,7 @@ public class DispararPlayer : MonoBehaviour
         if (n == balas.Length)
             n = 0;
 
-        if (Input.GetButtonDown(fireButton) && transform.GetChild(0).gameObject.activeInHierarchy && cantBalas > 0)
+        if (Input.GetButtonDown(fireButton) && transform.GetChild(1).gameObject.activeInHierarchy && cantBalas > 0)
         {
             balas[n].transform.position = spawnTransform.position;
             balas[n].transform.rotation = spawnTransform.rotation;
