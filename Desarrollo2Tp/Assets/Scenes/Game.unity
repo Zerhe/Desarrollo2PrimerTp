@@ -1605,6 +1605,16 @@ Prefab:
       propertyPath: scoreOtherPlayer
       value: 
       objectReference: {fileID: 1952708643}
+    - target: {fileID: 65844331693621830, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1.6797161
+      objectReference: {fileID: 0}
+    - target: {fileID: 65844331693621830, guid: 2e19ef92bcdcc8241b87b07f06c0cf31,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -0.16606426
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e19ef92bcdcc8241b87b07f06c0cf31, type: 2}
   m_IsPrefabParent: 0
@@ -2241,6 +2251,16 @@ Prefab:
       propertyPath: scoreOtherPlayer
       value: 
       objectReference: {fileID: 1857133232}
+    - target: {fileID: 65726947849266968, guid: b76fef516561f974db0854607773e034,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1.5795441
+      objectReference: {fileID: 0}
+    - target: {fileID: 65726947849266968, guid: b76fef516561f974db0854607773e034,
+        type: 2}
+      propertyPath: m_Center.z
+      value: -0.11597824
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b76fef516561f974db0854607773e034, type: 2}
   m_IsPrefabParent: 0
