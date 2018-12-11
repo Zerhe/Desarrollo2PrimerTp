@@ -1,4 +1,4 @@
-                          <img src="Titulo.png" />
+<img src="Titulo.png" />
 
 # Push is Fun
 
@@ -29,7 +29,7 @@ En este modo los jugadores deberan ezquivar enemigos y trarar de derribar al otr
 el jugador que sobreviva por mas tiempo sera el vencedor, habiendo un tiempo limite
 en el cual si sobreviven ambos empataran. 
 
-Creditos
+# Credits
 Amarilla Rodrigo - Progamming - LevelDesing
 
 Texturas
@@ -45,7 +45,7 @@ https://freesound.org/people/luckylittleraven/sounds/202221/
 Skyboxs
 https://93i.de/p/free-skybox-texture-set/
 
-Links
+# Links
 
 Trello:
 https://trello.com/b/qODlaD9P/primer-tp-desarrolo-2
