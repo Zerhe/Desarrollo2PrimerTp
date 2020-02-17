@@ -473,7 +473,6 @@ GameObject:
   - component: {fileID: 114916969548007300}
   - component: {fileID: 114573702759082438}
   - component: {fileID: 114859046833420966}
-  - component: {fileID: 114539176902237150}
   - component: {fileID: 114053882788112386}
   - component: {fileID: 82876553372774872}
   m_Layer: 0
@@ -1069,7 +1068,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839506479896354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.55, z: -32.3}
+  m_LocalPosition: {x: 0.06, y: 8.77, z: -32.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4909199861985824}
@@ -1244,8 +1243,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8181181, y: 1, z: 2.494152}
-  m_Center: {x: 0.040210843, y: 0, z: -0.57328224}
+  m_Size: {x: 1.8181181, y: 1, z: 1.5795441}
+  m_Center: {x: 0.040210843, y: 0, z: -0.11597824}
 --- !u!81 &81669838372386772
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1413,19 +1412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushSong: {fileID: 8300000, guid: c213cf64adf3e764b8b8c63c68d6da01, type: 3}
---- !u!114 &114539176902237150
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839506479896354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e7ebc6a1e3653498a8a5d34a69d9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera01: {fileID: 1134633168898880}
-  camera02: {fileID: 1446154852547298}
 --- !u!114 &114573702759082438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1478,6 +1464,7 @@ MonoBehaviour:
   transformPoint: {fileID: 0}
   scoreOtherPlayer: {fileID: 0}
   timer: {fileID: 0}
+  height: 5
   minRespawn: 40
   maxRespawn: 40
 --- !u!124 &124290783343105760

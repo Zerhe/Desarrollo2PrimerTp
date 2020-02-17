@@ -4342,6 +4342,54 @@ Prefab:
       propertyPath: timerGame
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1777982983859908, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877909598800632, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486975898031382, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692369902899772, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309684700653704, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402286285400690, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159017400276910, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624732975054412, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028631535554178, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103916626780008, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034128178049978, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633181112604646, guid: ceb098fba91b2c343b664db147572f24, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceb098fba91b2c343b664db147572f24, type: 2}
   m_IsPrefabParent: 0
