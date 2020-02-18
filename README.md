@@ -1,4 +1,4 @@
-                          <img src="Titulo.png" />
+<img src="Titulo.png" />
 
 # Push is Fun
 
@@ -20,7 +20,7 @@ Tercer Modo (Supervivencia):
 <img src="Mode03.png" />
 En este modo los jugadores deberan derribar al otro empujandolo fuera de las plataformas, tendran un tiempo para hacerlo y cuando este acabe el jugador que halla derribado mas al otro sera el ganador.
 
-Creditos
+# Credits
 
 Programacion
 Amarilla Rodrigo
@@ -62,7 +62,7 @@ Skyboxs
 Free Skybox Texture Set de 93-interactive
 https://93i.de/p/free-skybox-texture-set/
 
-Links
+# Links
 
 Trello:
 https://trello.com/b/qODlaD9P/primer-tp-desarrolo-2
