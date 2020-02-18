@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65284394444785800}
   - component: {fileID: 23229161969611860}
   - component: {fileID: 114636678653812144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ParedRebote
   m_TagString: Plataforma
   m_Icon: {fileID: 0}

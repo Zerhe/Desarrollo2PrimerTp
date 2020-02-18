@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23957004367718080}
   - component: {fileID: 114530056999407910}
   - component: {fileID: 114065396928858724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ParedMueve
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
