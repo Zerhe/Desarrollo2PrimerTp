@@ -35,16 +35,16 @@ public class Respawn : MonoBehaviour
     {
         if (transform.position.y < -15)
         {
-            if (SceneManager.GetActiveScene().name != "Game3")
-            {
+            //if (SceneManager.GetActiveScene().name != "Game3")
+            //{
                 RespanwnRandom();
                 scorePlayer.SumDeaths();
-            }
+            /*}
             else
             {
                 scoreOtherPlayer.SumScoreFinal();
                 timer.SetTimerGame(0);
-            }
+            }*/
         }
     }
     void RespanwnRandom()

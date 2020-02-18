@@ -748,7 +748,7 @@ MonoBehaviour:
   playerWinText: {fileID: 0}
   scorePlayer01: {fileID: 0}
   scorePlayer02: {fileID: 0}
-  timerGame: 100
+  timerGame: 20
   plataformaPunto: {fileID: 0}
 --- !u!114 &114423677706155656
 MonoBehaviour:

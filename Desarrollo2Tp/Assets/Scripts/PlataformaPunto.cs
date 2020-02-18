@@ -7,11 +7,15 @@ public class PlataformaPunto : MonoBehaviour
     private Slider sliderPunto;
     private MeshRenderer meshRenderer;
     private float valorPunto;
+    [SerializeField]
+    private ParticleSystem particle;
+    private ParticleSystem.MainModule settings;
 
     void Awake()
     {
         valorPunto = 0;
         meshRenderer = GetComponent<MeshRenderer>();
+        settings = particle.main;
     }
 
     void Update()
@@ -19,11 +23,13 @@ public class PlataformaPunto : MonoBehaviour
         if (valorPunto > 10)
         {
             meshRenderer.material.color = Color.red;
+            settings.startColor = new ParticleSystem.MinMaxGradient(Color.red);
             valorPunto = 10;
         }
         if (valorPunto < -10)
         {
             meshRenderer.material.color = Color.blue;
+            settings.startColor = new ParticleSystem.MinMaxGradient(Color.blue);
             valorPunto = -10;
         }
         sliderPunto.value = valorPunto;

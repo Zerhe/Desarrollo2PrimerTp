@@ -43,7 +43,8 @@ public class Timer : MonoBehaviour {
         {
             sumTimer = false;
             panelWin.SetActive(true);
-            if (scorePlayer01.GetScore() > scorePlayer02.GetScore())
+
+            /*if (scorePlayer01.GetScore() > scorePlayer02.GetScore())
                 scorePlayer01.SumScoreFinal();
             else if (scorePlayer02.GetScore() > scorePlayer01.GetScore())
                 scorePlayer02.SumScoreFinal();
@@ -56,22 +57,34 @@ public class Timer : MonoBehaviour {
             if (scorePlayer01.GetDeaths() > scorePlayer02.GetDeaths())
                 scorePlayer02.SumScoreFinal();
             else if (scorePlayer02.GetDeaths() > scorePlayer01.GetDeaths())
-                scorePlayer01.SumScoreFinal();
+                scorePlayer01.SumScoreFinal();*/
 
             if (SceneManager.GetActiveScene().name == "Game")
             {
                 if (plataformaPunto.GetValorPunto() > 0)
-                    scorePlayer01.SumScoreFinal();
+                    playerWinText.text = "Player01 Win ";
                 else if (plataformaPunto.GetValorPunto() < 0)
-                    scorePlayer02.SumScoreFinal();
+                    playerWinText.text = "Player02 Win ";
+                else
+                    playerWinText.text = "Empate";
             }
 
-            if (scorePlayer01.GetScoreFinal() > scorePlayer02.GetScoreFinal() )
+            if (SceneManager.GetActiveScene().name == "Game3")
+            {
+                if (scorePlayer01.GetDeaths() > scorePlayer02.GetDeaths())
+                    playerWinText.text = "Player02 Win ";
+                else if (scorePlayer02.GetDeaths() > scorePlayer01.GetDeaths())
+                    playerWinText.text = "Player01 Win ";
+                else
+                    playerWinText.text = "Empate";
+            }
+
+            /*if (scorePlayer01.GetScoreFinal() > scorePlayer02.GetScoreFinal() )
                 playerWinText.text = "Player01 Win ";
             else if (scorePlayer02.GetScoreFinal() > scorePlayer01.GetScoreFinal())
                 playerWinText.text = "Player02 Win ";
             else
-                playerWinText.text = "Empate";
+                playerWinText.text = "Empate";*/
         }
     }
     public void SetTimerGame(int valor)
