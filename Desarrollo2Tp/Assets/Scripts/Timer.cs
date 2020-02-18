@@ -43,6 +43,7 @@ public class Timer : MonoBehaviour {
         {
             sumTimer = false;
             panelWin.SetActive(true);
+            Time.timeScale = 0;
 
             /*if (scorePlayer01.GetScore() > scorePlayer02.GetScore())
                 scorePlayer01.SumScoreFinal();

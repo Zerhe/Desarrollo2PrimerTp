@@ -27,7 +27,11 @@ public class Reg : MonoBehaviour
         SceneManager.LoadScene(nameScene);
         if (nameScene == "Menu")
         {
-            //Destroy(gameObject);
+            if (aud.clip != MenuSong)
+            {
+                aud.clip = MenuSong;
+                aud.Play();
+            }
         }
         if (nameScene == "Game")
         {
@@ -51,7 +55,7 @@ public class Reg : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButton("Cancel"))
+        /*if (Input.GetButton("Cancel"))
         {
             ChangeScene("Menu");
             if (aud.clip != MenuSong)
@@ -59,7 +63,7 @@ public class Reg : MonoBehaviour
                 aud.clip = MenuSong;
                 aud.Play();
             }
-        }
+        }*/
         if (Input.GetButton("Reset"))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
