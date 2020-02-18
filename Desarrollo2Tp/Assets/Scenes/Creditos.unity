@@ -360,8 +360,8 @@ RectTransform:
   m_Father: {fileID: 1881099218}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.36063144, y: -0.3565192}
-  m_AnchorMax: {x: 0.65965104, y: 0.9125301}
+  m_AnchorMin: {x: 0.24944386, y: -2.0550117}
+  m_AnchorMax: {x: 0.7856807, y: 0.6427209}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -386,20 +386,28 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
+    m_MaxSize: 100
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Programacion\nAmarilla Rodrigo\n\nDise\xF1o de nivel\nAmarilla Rodrigo\n\nModelos
-    3D\nSunixDev\r\n\rPopup Asylum\r\n\nTexturas\nMafubash\r\nNobiax / Yughues\r\n\r\nAudio\nAmarilla
-    Rodrigo\nMativve\nedtijo\nDarkmast49\nluckylittleraven\n\nSkyboxs\n93-interactive"
+    3D\nSciFi Enemies and Vehicles de \rPopup Asylum\r\nhttps://assetstore.unity.com/packages/3d/characters/robots\n/scifi-enemies-and-vehicles-15159\nScifi
+    Assault de SunixDev\r\nhttps://assetstore.unity.com/publishers/15417\n\nTexturas\nTileable
+    Pack 01 de Mafubash\r\nhttps://assetstore.unity.com/packages/2d/textures-materials\n/floors/tileable-pack-01-49278\nYughues
+    Free Metal Materials de Nobiax / Yughues\r\nhttps://assetstore.unity.com/packages/2d/textures-materials\n/metals/yughues-free-metal-materials-12949\n\nFonts\nAstron
+    Boy Wonder\r de Typodermic Fonts\r\nhttps://www.1001freefonts.com/es/astron-boy-wonder.font\r\n\nAudio\nAmarilla
+    Rodrigo\nHappy Sounds by Mativve de Mativve\nhttps://freesound.org/people/Mativve/sounds/391538/\nhejd\xE5
+    - Depressive Guitar de edtijo\nhttps://freesound.org/people/edtijo/sounds/238913/\nFightScene
+    de Darkmast49\nhttps://freesound.org/people/Darkmast49/sounds/157846/\nRandom
+    Music Shorts de luckylittleraven\nhttps://freesound.org/people/luckylittleraven/sounds/202221/\n\nSkyboxs\nFree
+    Skybox Texture Set de 93-interactive\nhttps://93i.de/p/free-skybox-texture-set/"
 --- !u!222 &1620884968
 CanvasRenderer:
   m_ObjectHideFlags: 0
