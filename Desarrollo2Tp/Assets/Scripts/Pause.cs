@@ -14,13 +14,13 @@ public class Pause : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButton("Cancel") && !pausePanel.activeInHierarchy)
+        if (Input.GetButtonUp("Cancel") && !pausePanel.activeInHierarchy)
         {
             pausePanel.SetActive(true);
             Cursor.visible = true;
             Time.timeScale = 0;
         }
-        else if (Input.GetButton("Cancel") && pausePanel.activeInHierarchy)
+        else if (Input.GetButtonUp("Cancel") && pausePanel.activeInHierarchy)
         {
             Cursor.visible = false;
             Time.timeScale = 1;

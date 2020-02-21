@@ -28,7 +28,7 @@ public class CheckCameraVision : MonoBehaviour {
 	
 	void Update ()
     {
-        print(playerMoving);
+        //print(playerMoving);
         //print(playerRgb.velocity.magnitude);
 
         if (playerRgb.velocity.magnitude > 1 )

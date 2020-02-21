@@ -27,6 +27,7 @@ public class Reg : MonoBehaviour
         SceneManager.LoadScene(nameScene);
         if (nameScene == "Menu")
         {
+            Time.timeScale = 1;
             if (aud.clip != MenuSong)
             {
                 aud.clip = MenuSong;
