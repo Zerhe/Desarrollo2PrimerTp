@@ -839,8 +839,8 @@ RectTransform:
   m_Father: {fileID: 566252734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.07787818, y: 0.12176621}
-  m_AnchorMax: {x: 0.91688013, y: 0.4766763}
+  m_AnchorMin: {x: 0.042000003, y: 0.15900001}
+  m_AnchorMax: {x: 0.9571652, y: 0.46846837}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -870,13 +870,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Esquiva los obstaculos y sobrevive mas tiempo que tu rival.
+  m_Text: Derriba a tu rival  para ganar
 --- !u!222 &577924879
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1150,8 +1150,8 @@ RectTransform:
   m_Father: {fileID: 1226244725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.019926697, y: 0.14252542}
-  m_AnchorMax: {x: 0.96816325, y: 0.46846837}
+  m_AnchorMin: {x: 0.042000003, y: 0.15900001}
+  m_AnchorMax: {x: 0.9571652, y: 0.46846837}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1181,13 +1181,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Llega a la meta antes que tu rival, juntando monedas y sin morir demasiado.
+  m_Text: 'Lllega a la meta antes que tu rival '
 --- !u!222 &832186787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1947,8 +1947,8 @@ RectTransform:
   m_Father: {fileID: 1542113346}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.019926697, y: 0.093934774}
-  m_AnchorMax: {x: 0.97848773, y: 0.46846837}
+  m_AnchorMin: {x: 0.042000003, y: 0.15900001}
+  m_AnchorMax: {x: 0.9571652, y: 0.46846837}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1978,14 +1978,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Captura el punto de control, juntando monedas y derribando a tu enemigo
-    en el proceso.
+  m_Text: Captura el punto de control
 --- !u!222 &2024545880
 CanvasRenderer:
   m_ObjectHideFlags: 0
